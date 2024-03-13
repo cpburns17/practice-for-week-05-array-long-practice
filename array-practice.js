@@ -1,38 +1,75 @@
 const findMinimum = arr => {
 
-  // Your code here
+if(arr.length === 0) return undefined;
+
+return Math.min(...arr)
 
 };
 
 const runningSum = arr => {
+  let runSum = []
+  let sum = 0
 
-  // Your code here
+  for(let i=0; i<arr.length; i++) {
+    sum += arr[i]
+    runSum.push(sum)
+
+  } return runSum
+  
 };
 
 const evenNumOfChars = arr => {
-
-  // Your code here
+  let count = 0;
+  for(let i=0; i<arr.length; i++) {
+    if(arr[i].length % 2 === 0) {
+      count++
+    }
+  } return count
 };
 
 const smallerThanCurr = arr => {
-
-  // Your code here
+  let count = [];
+  let smallerThanCurrCount;
+  for (let i = 0; i < arr.length; i++) {
+    let curr = arr[i];
+    smallerThanCurrCount = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (curr > arr[j]) {
+        smallerThanCurrCount++;
+      }
+    }
+    count.push(smallerThanCurrCount);
+  }
+  return count;
 
 };
 
 const twoSum = (arr, target) => {
 
-  // Your code here
+  for(let i=0; i<arr.length; i++) {
+
+    for(let j=i+1; j<arr.length; j++){
+
+      if(arr[i] + arr[j] === target) {
+        return true
+      }
+    }
+  } return false
+
 };
 
 const secondLargest = arr => {
 
-  // Your code here
+  let sortedArr = arr.sort()
+  let second = sortedArr.length -2
+  return sortedArr[second]
+  
 };
 
 const shuffle = (arr) => {
 
-  // Your code here
+  return 
+  
 };
 
 
